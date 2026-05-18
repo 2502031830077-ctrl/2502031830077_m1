@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // print 1 to 10
+        // for (let i = 1; i <= 10; i++) {
+        //     // console.log(i);  
+        //     document.write("value is: " + i + "<br>");
+        // }
+        // using while loop to print 1 to 10
+        // let i = 1;
+        // while (i <= 10) {
+        //     // console.log(i);  
+        //     document.write("value is: " + i + "<br>");
+        //     i++;
+        // }
+
+        // using do while loop to print 1 to 10
+        // let j = 1;
+        // do {
+        //     document.write("value is: " + j + "<br>");
+        // } while (j <= 10);
+
+
+        // display student names
+        // let students = ["Alice", "Bob", "Charlie", "David", "Eve"];
+        // for (let i = 0; i < students.length; i++) {
+        //     console.log(students[i]);
+        //     document.write("Student name: " + students[i] + "<br>");
+        // }
+
+        // print even numbers
+        for (let i = 1; i <= 20; i++) {
+            if (i % 2 === 0) {
+                // console.log(i);
+                document.write("Even number: " + i + "<br>");
+            }
+        }
+
+        // print odd numbers
+        for (let i = 1; i <= 20; i++) {
+            if (i % 2 !== 0) {
+                // console.log(i);
+                document.write("Odd number: " + i + "<br>");
+            }
+        }
+        // atm pin checker
+        let correctPin = "1234";
+        let userPin = prompt("Enter your ATM PIN:");
+        if (userPin === correctPin) {
+            alert("Access granted. Welcome!");
+        } else {
+            alert("Access denied. Incorrect PIN.");
+        }
+        // password validation
+        let password = prompt("Enter your password:");
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters long.");
+        } else if (!/[A-Z]/.test(password)) {
+            alert("Password must contain at least one uppercase letter.");
+        } else if (!/[a-z]/.test(password)) {
+            alert("Password must contain at least one lowercase letter.");
+        } else if (!/[0-9]/.test(password)) {
+            alert("Password must contain at least one number.");
+        } else {
+            alert("Password is valid.");
+        }
+        // user login attempt
+        let correctUsername = "admin";
+        let correctPassword = "password123";
+        let username = prompt("Enter your username:");
+        let passwordInput = prompt("Enter your password:");
+        if (username === correctUsername && passwordInput === correctPassword) {
+            alert("Login successful. Welcome, " + username + "!");
+        } else {
+            alert("Login failed. Incorrect username or password.");
+        }
+
+        // find largest number among three numbers
+        let num1 = parseFloat(prompt("Enter the first number:"));
+        let num2 = parseFloat(prompt("Enter the second number:"));
+        let num3 = parseFloat(prompt("Enter the third number:"));
+        let largest = Math.max(num1, num2, num3);
+        alert("The largest number is: " + largest);
+
+        // reverse a string
+        let str = prompt("Enter a string to reverse:");
+        let reversedStr = str.split("").reverse().join("");
+        alert("Reversed string: " + reversedStr);
+    </script>
+</body>
+
+</html>

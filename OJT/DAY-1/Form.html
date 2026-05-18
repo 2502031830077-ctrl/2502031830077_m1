@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body bgcolor="gray">
+    <h1 align="center">Registration page</h1>
+    
+    <!-- The form should wrap the entire table -->
+    <form>
+        <table border="5" align="center" cellpadding="5">
+            <tr>
+                <td><label>First Name:</label></td>
+                <td><input type="text" name="FN" placeholder="Enter your First Name" required></td>
+            </tr>
+            <tr>
+                <td><label>Last Name:</label></td>
+                <td><input type="text" name="LN" placeholder="Enter your Last Name" required></td>
+            </tr>
+            <tr>
+                <td><label>Contact No.:</label></td>
+                <td><input type="number" name="CN" placeholder="Enter your no" required></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email" name="Email" placeholder="Enter your email" required></td>
+            </tr>
+            <tr>
+                <td><label>Password:</label></td>
+                <td><input type="password" name="pass" placeholder="Enter your password" required></td>
+            </tr>
+            <tr>
+                <td><label>Date of Birth:</label></td>
+                <td><input type="date" name="DOB"></td>
+            </tr>
+            <tr>
+                <td><label>Age:</label></td>
+                <td><input type="number" name="age"></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" name="gen" value="male"> Male 
+                    <input type="radio" name="gen" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address:</label></td>
+                <td><textarea name="address"></textarea></td>
+            </tr>
+            <tr>
+                <td><label>City:</label></td>
+                <td>
+                    <select name="city">
+                        <option>Ahmedabad</option>
+                        <option>Surat</option>
+                        <option>Rajkot</option>
+                        <option>Jamnagar</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Pincode:</label></td>
+                <td><input type="number" name="PC" required></td>
+            </tr>
+            <tr>
+                <td><label>Joining Date:</label></td>
+                <td><input type="date" name="JD"></td>
+            </tr>
+            <tr>
+                <td><label>Confirm Your Form:</label></td>
+                <td>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
