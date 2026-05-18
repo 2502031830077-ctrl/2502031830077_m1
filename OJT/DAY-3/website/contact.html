@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <header class="logo">
+                <h1><a href="index.html">My Website</a></h1>
+            </header>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p class="section-description">Have questions? We'd love to hear from you. Get in touch with us today!</p>
+
+                <div class="contact-container">
+                    <!-- Contact Form -->
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <h3>Send us a Message</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <div class="info-box-contact">
+                            <h3>📍 Address</h3>
+                            <p>123 Main Street<br>
+                               Your City, State 12345<br>
+                               Your Country</p>
+                        </div>
+
+                        <div class="info-box-contact">
+                            <h3>📞 Phone</h3>
+                            <p>+1 (555) 123-4567<br>
+                               +1 (555) 123-4568</p>
+                        </div>
+
+                        <div class="info-box-contact">
+                            <h3>📧 Email</h3>
+                            <p>info@mywebsite.com<br>
+                               support@mywebsite.com</p>
+                        </div>
+
+                        <div class="info-box-contact">
+                            <h3>⏰ Business Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                               Saturday: 10:00 AM - 4:00 PM<br>
+                               Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            event.target.reset();
+        }
+    </script>
+</body>
+
+</html>
