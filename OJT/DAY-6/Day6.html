@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function in js</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        let welcom= anme => `welcome  ${name}`;
+
+        console.log(welcome("sahil how are you",25));
+
+        console.log(typeof welcome);
+
+    </script>
+
+    <h2>math methods</h2>
+    <script>
+        document.writeln(Math.E);
+
+        var a =math.power(2,3);
+        document.writeln(a);
+
+        var num=math.random();
+        document.writeln(num);
+
+        document.writeln(math.ceil(2.7));
+        document.writeln(math.floor(2.7));
+        document.writeln(math.round(2.7)); 
+    </script>
+    
+    <script>
+        var person = new Object();
+         // Assign fields to object "person"
+         person.firstName = "Sandip";
+         person.lastName = "Patel";
+         // Assign a method to object "person"
+         person.sayHi = ()=>{
+            alert("Welcome " + person.firstName + " " + person.lastName)
+        }
+        person.sayHi(); // Call the method in "person"
+    </script>
+
+    <script>
+        var person = {firstName: "Sandip", lastName: "Patel",
+        sayHi : function() 
+        {
+            alert("Hi! " + person.firstName + " " + person.lastName);
+        }
+    }
+    person.sayHi(); // Call the method in "person"
+</script>
+
+
+</body>
+</html>
