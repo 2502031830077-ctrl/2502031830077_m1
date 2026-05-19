@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parmar Rajan Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="portfolio-onepage">
+        <header class="site-header">
+            <div class="site-brand">
+                <div class="site-avatar">
+                    <img src="download.png" alt="Parmar Rajan">
+                </div>
+                <div>
+                    <div class="site-name">Parmar Rajan</div>
+                    <div class="site-tag">Computer Engineering Enthusiast</div>
+                </div>
+            </div>
+            <nav class="site-nav">
+                <button class="nav-button active" data-target="about-section">About</button>
+                <button class="nav-button" data-target="skills-section">Skills</button>
+                <button class="nav-button" data-target="experience-section">Internship</button>
+                <button class="nav-button" data-target="projects-section">Projects</button>
+                <button class="nav-button" data-target="contact-section">Contact</button>
+            </nav>
+        </header>
+
+        <main class="page-main">
+            <section class="hero-section slide-up">
+                <div class="hero-copy">
+                    <span class="eyebrow" style="color: var(--accent); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">Crafting smarter web experiences</span>
+                    <h1>Hi, I’m Rajan. I build polished web pages and smooth digital journeys.</h1>
+                    <p>I am a Computer Engineering student with diploma training and hands-on experience in modern front-end development. I love turning ideas into clean, responsive web pages that feel simple and powerful.</p>
+                    <div class="hero-actions">
+                        <button class="button" data-target="contact-section">Get in touch</button>
+                        <a href="#projects-section" class="button button-secondary">View projects</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <img src="download.png" alt="Parmar Rajan">
+                    <div class="hero-badge">Web Developer in training</div>
+                </div>
+            </section>
+
+            <section id="about-section" class="main-section section-intro slide-up">
+                <h2>About Me</h2>
+                <p>I have successfully completed a Diploma in Computer Engineering and I am currently pursuing a B.Tech. I enjoy building web experiences, solving problems, and learning new technologies. Below are my skills, projects, internship experience, and contact info.</p>
+            </section>
+
+            <section id="skills-section" class="main-section slide-up">
+                <h2>Skills</h2>
+                <p>Click a skill to view details.</p>
+                <ul class="skill-list">
+                    <li><button class="skill-btn" data-skill="C++" data-detail="Strong object-oriented programming skills for desktop and algorithmic development.">C++</button></li>
+                    <li><button class="skill-btn" data-skill="Java" data-detail="Java knowledge for software development, object-oriented design, and backend logic.">Java</button></li>
+                    <li><button class="skill-btn" data-skill="Python" data-detail="Python experience for scripting, automation, and quick prototyping tasks.">Python</button></li>
+                    <li><button class="skill-btn" data-skill="HTML" data-detail="HTML expertise for building clean, semantic web page structure.">HTML</button></li>
+                    <li><button class="skill-btn" data-skill="CSS" data-detail="CSS skills for styling modern layouts and responsive design.">CSS</button></li>
+                    <li><button class="skill-btn" data-skill="JavaScript" data-detail="JavaScript knowledge for adding interactivity, DOM control, and event handling.">JavaScript</button></li>
+                </ul>
+                <div class="details-card skill-detail">Click a skill to view more details.</div>
+            </section>
+
+            <section id="experience-section" class="main-section slide-up">
+                <h2>Internship</h2>
+                <div class="experience-card">
+                    <h3>Web Development Training</h3>
+                    <p><strong>Brainylab</strong> — 15-day training on HTML, CSS, and JavaScript</p>
+                    <ul>
+                        <li>Built responsive application using PHP with MySQL integration.</li>
+                        <li>Implemented backend logic, REST-style handling, and form processing.</li>
+                        <li>Developed understanding of backend architecture and database queries.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="projects-section" class="main-section slide-up">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h3>Personal Portfolio</h3>
+                        <p>A responsive portfolio website that showcases profile, skills, projects, and contact details.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Web Application</h3>
+                        <p>Interactive web UI using HTML, CSS, and JavaScript with dynamic content and modern layout.</p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Programming Practice</h3>
+                        <p>Exercises completed in HTML, CSS, JavaScript, and PHP to improve algorithmic thinking and software skills.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact-section" class="main-section slide-up">
+                <h2>Contact</h2>
+                <p>Click an item to copy it to your clipboard.</p>
+                <ul class="contact-list">
+                    <li><button class="contact-item" data-type="phone" data-value="+91 93138 74256" data-note="Tap to copy the phone number.">Phone: +91 93138 74256</button></li>
+                    <li><button class="contact-item" data-type="email" data-value="rc6212030@gmail.com" data-note="Tap to copy the email address.">Email: rc6212030@gmail.com</button></li>
+                    <li><button class="contact-item" data-type="linkedin" data-value="https://www.linkedin.com/in/parmar-rajan-9a1b2523b/" data-note="Tap to copy the LinkedIn profile URL.">LinkedIn: parmar-rajan-9a1b2523b</button></li>
+                    <li><button class="contact-item" data-type="github" data-value="https://github.com/parmar-rajan" data-note="Tap to copy the GitHub profile URL.">GitHub: parmar-rajan</button></li>
+                </ul>
+                <div class="details-card contact-details">Click a contact item to see details here.</div>
+            </section>
+        </main>
+    </div>
+    <div class="toast" id="toast">Copied to clipboard!</div>
+    <script src="script.js"></script>
+</body>
+</html>
