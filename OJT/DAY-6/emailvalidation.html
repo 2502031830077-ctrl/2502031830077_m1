@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  name="myform">
+        <label for="username">email</label>
+        <input type="text" id="mytext"><br><br>
+        <label for="password">password</label>
+        <input type="text" name="password"><br><br>
+        <input type="button" value="submit"onclick="f()">
+    </form>
+
+    <script>
+        function f(){
+            var a=document.getElementById("mytext").value;
+            var pattern="^[\\w-_\.]*[\\w-_\.]\@[\\w]\.+[\\w]+[\\w]$";
+            var regex =new RegExp(pattern);
+            if (regex.test(a)){
+                alert("valid")
+            }
+            else{
+                alert("invalid")
+            }
+        }
+    </script>
+</body>
+</html>
