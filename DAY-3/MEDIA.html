@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 0;
+        }
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        video {
+            max-width: 50%;
+            height: auto;
+        }
+        footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            margin-top: auto;
+        }
+        @media (max-width: 768px) {
+            header, footer {
+                padding: 15px;
+            }
+            main {
+                padding: 15px;
+            }
+            .media-container {
+                gap: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            header, footer {
+                padding: 10px;
+            }
+            main {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .media-container {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Media Page</h1>
+    </header>
+    <main>
+        <div class="media-container">
+            <img src="download.jpg" alt="Sample Image">
+            <video controls>
+                <source src="247739.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Media Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>
