@@ -1,0 +1,64 @@
+/* /
+
+#abc {
+    color: blue;
+}
+
+h1 {
+    color: red;
+
+}
+
+div h4 {
+    font-size: xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+color: aqua;
+background: grey;
+font-weight: bold;
+    text-decoration: overline;
+    text-decoration: underline;
+    text-indent: 20%;
+    text-transform: capitalize;
+    white-space: nowrap;
+    word-spacing: 10px;
+    latter-spacing: 10px;
+    line-height: 10px;
+padding: 10px;
+    
+padding: top 10px; 
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 10px; 
+border: 1px solid black;
+padding: 80px 10px 80px 766px;
+
+}
+
+/* .Abc {
+    color: green;
+    text-align: center;
+} */
+
+.Abcd{
+    color: purple;
+    text-align: right ;
+}
+
+div h1 {
+    color: orange;
+    /* text-align: left; */
+    position: absolute;
+    left: 760px;
+    top: 100px;
+    border: 1px solid black;
+}
+
+div h2 {
+    border: 1px solid blue;
+    color: pink;
+    position: relative;
+    left: 10px;
+    top: 10px;
+
+}

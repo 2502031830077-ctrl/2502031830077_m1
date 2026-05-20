@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <h2>Access Array Values</h2>
+    <p id="demo"></p>
+    <script>
+        var myJSON = '{"name":"John", "age":30, "city":"New York", "cars":["Ford", "BMW", "Fiat"]}';
+        var myObj = JSON.parse(myJSON);
+        document.getElementById("demo").innerHTML = myObj.cars[0] + ", " + myObj.cars[1] + ", " + myObj.cars[2];
+        document.getElementById("demo").innerHTML = myObj.name + " is " + myObj.age + " years old and lives in " + myObj.city + ". He has the following cars: " + myObj.cars[0] + ", " + myObj.cars[1] + ", and " + myObj.cars[2] + ".";
+
+    </script>
+</body>
+</html>
