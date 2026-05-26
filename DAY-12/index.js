@@ -12,3 +12,24 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.send("<h1>About Page</h1>");
 });
+
+app.get('/about/user', (req, res) => {
+    res.send("<h1>About Users Page</h1>");
+});
+
+app.get('/user/:id', (req, res) => {
+    res.send(`<h1>User Page - ID: ${req.params.id}</h1>`);
+}); 
+
+
+app.get('/user/:userid/book/:bookid', (req, res) => {
+    res.send(`<h1>User Page - User ID: ${req.params.userid}, Book ID: ${req.params.bookid}</h1>`);
+});
+
+
+app.get('/search', (req, res) => {
+    const name = req.query.name;
+    const age = req.query.age;
+    const city = req.query.city;
+    res.send(`<h1>Search Results - Name: ${name}, Age: ${age}, City: ${city}</h1>`);
+});
