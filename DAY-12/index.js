@@ -33,3 +33,25 @@ app.get('/search', (req, res) => {
     const city = req.query.city;
     res.send(`<h1>Search Results - Name: ${name}, Age: ${age}, City: ${city}</h1>`);
 });
+
+
+
+
+app.get('/', (req, res) => {
+    res.json({ name: 'Rajan parmar', age: 25, city: 'Ahmedabad' });
+});
+
+app.get('/about', (req, res) => {
+    res.redirect('https://www.google.com');
+});
+
+app.set('view engine', 'ejs');
+
+app.get('/about', (req, res) => {
+    res.render('..'); 
+});
+
+
+app.get('/download', (req, res) => {
+    res.download('./files/shortcuts.pdf');
+});
