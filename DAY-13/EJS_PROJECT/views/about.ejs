@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1 style="background-color: lightblue;"><%= title %></h1>
+
+    <% if (message){%>
+        <p><%= message %></p>
+        <% } else {%>
+        <span>No message available.</span>
+    <% } %>
+
+    <ul>
+        <% fruits.forEach(fruit => { %>
+            <li><%= fruit %></li>
+        <% }); %>
+    </ul>
+
+    <table border="1" width="50%">
+        <% items.forEach(item => { %>
+      
+                <td><%= item.name %></td>
+                <td><%= item.age %></td>
+                <td><%= item.city %></td>
+            </tr>
+        <% }); %>
+    </table>
+
+</body>
+</html>

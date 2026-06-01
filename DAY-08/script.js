@@ -1,3 +1,5 @@
+// document is for acessing html and css files 
+
 document.addEventListener('DOMContentLoaded', () => {
     const navButtons = document.querySelectorAll('.nav-button');
     const skillButtons = document.querySelectorAll('.skill-btn');
