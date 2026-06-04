@@ -1,0 +1,27 @@
+{
+  "name": "ojt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2502031830077-ctrl/2502031830077_m1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2502031830077-ctrl/2502031830077_m1/issues"
+  },
+  "homepage": "https://github.com/2502031830077-ctrl/2502031830077_m1#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14",
+    "mongoose": "^7.0.0"
+  }
+}
