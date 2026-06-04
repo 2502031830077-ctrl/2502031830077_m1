@@ -1,0 +1,138 @@
+/* assets/css/custom.css */
+/* ============================= */
+/* Global reset and variables */
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --color-bg: #f0f2f5;
+  --color-bg-dark: #1e1e2f;
+  --color-primary: #4a90e2;
+  --color-primary-dark: #3a78c2;
+  --color-white: #ffffff;
+  --color-muted: #6c757d;
+  --radius: 12px;
+  --shadow-lg: 0 12px 24px rgba(0,0,0,0.15);
+  --transition: all 0.3s ease;
+}
+
+/* Dark mode – prefers‑color‑scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-bg-dark);
+    --color-white: #e0e0ff;
+    --color-muted: #a0a0b0;
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--color-bg);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Glassmorphism card */
+.card {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255,255,255,0.18);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.2);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+}
+
+.card-body {
+  background: rgba(255,255,255,0.6);
+  padding: 1.5rem;
+}
+
+/* Form styling */
+.form-control-plaintext {
+  background: transparent;
+  border: none;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+input.form-control,
+textarea.form-control {
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.12);
+  transition: var(--transition);
+  background: rgba(255,255,255,0.8);
+}
+input.form-control:focus,
+textarea.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(74,144,226,0.2);
+}
+
+/* Button enhancements */
+.btn {
+  border-radius: var(--radius);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+.btn-primary {
+  background: var(--color-primary);
+  border: none;
+}
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+.btn-outline-info {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+.btn-outline-info:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Table styling */
+.table {
+  background: transparent;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+.table th,
+.table td {
+  background: rgba(255,255,255,0.7);
+  border: none;
+  vertical-align: middle;
+}
+.table tbody tr:hover td {
+  background: rgba(255,255,255,0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin: 0 1rem;
+  }
+  .table th,
+  .table td {
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer spacing */
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--color-muted);
+}

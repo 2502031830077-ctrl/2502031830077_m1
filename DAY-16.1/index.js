@@ -29,45 +29,44 @@ app.get('/add-contact', (req, res) => {
 });
 
 app.post('/add-contact', async (req, res) => {
-  const contact = await Contact.insertOne({
-
-  })
-  res.send(req.body)
+  try {
+    const contact = await Contact.create(req.body);
+    res.redirect('/');
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
 });
 
 app.get('/show-contact/:id', async (req, res) => {
   try {
     const contact = await Contact.findById(req.params.id);
-    if (!contact) return res.status(404).send("Contact not found.");
+    if (!contact) {
+      return res.status(404).send('Contact not found');
+    }
     res.render('show-contact', { contact });
   } catch (error) {
-    res.status(400).send("Invalid contact id.");
+    res.status(500).send(error.message);
   }
 });
 
 app.get('/update-contact/:id', async (req, res) => {
   try {
     const contact = await Contact.findById(req.params.id);
-    if (!contact) return res.status(404).send("Contact not found.");
+    if (!contact) {
+      return res.status(404).send('Contact not found');
+    }
     res.render('update-contact', { contact });
   } catch (error) {
-    res.status(400).send("Invalid contact id.");
+    res.status(500).send(error.message);
   }
 });
 
 app.post('/update-contact/:id', async (req, res) => {
   try {
-    const { first_name, last_name, email, phone, address } = req.body;
-    await Contact.findByIdAndUpdate(req.params.id, {
-      first_name,
-      last_name,
-      email,
-      phone,
-      address
-    });
+    await Contact.findByIdAndUpdate(req.params.id, req.body);
     res.redirect('/');
   } catch (error) {
-    res.status(500).send("Unable to update contact.");
+    res.status(500).send(error.message);
   }
 });
 
@@ -76,10 +75,10 @@ app.get('/delete-contact/:id', async (req, res) => {
     await Contact.findByIdAndDelete(req.params.id);
     res.redirect('/');
   } catch (error) {
-    res.status(400).send("Invalid contact id.");
+    res.status(500).send(error.message);
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`server is running on port ${PORT}`);
+app.listen(3000, () => {
+  console.log("server is running on port 3000");
 });
