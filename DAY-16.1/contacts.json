@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "6a1feb1b26a094ce5a64c5e5",
+    "firstName": "PARMAR",
+    "lastName": "RAJAN",
+    "email": "RAJAN@gmail.com",
+    "phone": "93164473345",
+    "address": "b/34 gokuldham app vijalpur police choke",
+    "createdAt": "2026-06-03T08:51:39.739Z"
+  },
+  {
+    "_id": "6a1fc983125d793947b38a76",
+    "firstName": "Bhatt Hirak Pinakin bhai",
+    "lastName": "hirak",
+    "email": "bhatthirak9@gmail.com",
+    "phone": "08511852621",
+    "address": "vijalpur police choke Ahmedabad",
+    "createdAt": "2026-06-03T06:28:19.270Z"
+  },
+  {
+    "_id": "6a1fc78401d543e5428fe21c",
+    "firstName": "bhatt",
+    "lastName": "Hirak",
+    "email": "bhatthirak9@gmail.com",
+    "phone": "09316447335",
+    "address": "b/34 gokuldham app vijalpur police choke",
+    "createdAt": "2026-06-03T06:19:48.425Z"
+  },
+  {
+    "_id": "507f1f77bcf86cd799439011",
+    "firstName": "Alfred",
+    "lastName": "Kuhlman",
+    "email": "alfred@test.com",
+    "phone": "98989898",
+    "address": "123 Main Street, Springfield",
+    "createdAt": "2026-06-03T06:19:39.857Z"
+  },
+  {
+    "_id": "507f1f77bcf86cd799439012",
+    "firstName": "Frederick",
+    "lastName": "Jerde",
+    "email": "frederick@test.com",
+    "phone": "54545454",
+    "address": "456 Oak Road, Rivertown",
+    "createdAt": "2026-06-03T06:19:39.858Z"
+  },
+  {
+    "_id": "507f1f77bcf86cd799439013",
+    "firstName": "Joannie",
+    "lastName": "McLaughlin",
+    "email": "joannie@test.com",
+    "phone": "75757575",
+    "address": "789 Pine Avenue, Lakeshore",
+    "createdAt": "2026-06-03T06:19:39.858Z"
+  },
+  {
+    "_id": "507f1f77bcf86cd799439014",
+    "firstName": "Odie",
+    "lastName": "Koss",
+    "email": "odie@test.com",
+    "phone": "64646464",
+    "address": "321 Elm Boulevard, Hill Valley",
+    "createdAt": "2026-06-03T06:19:39.858Z"
+  },
+  {
+    "_id": "507f1f77bcf86cd799439015",
+    "firstName": "Edna",
+    "lastName": "Ondrickka",
+    "email": "edna@test.com",
+    "phone": "58595858",
+    "address": "654 Maple Drive, Greendale",
+    "createdAt": "2026-06-03T06:19:39.858Z"
+  }
+]

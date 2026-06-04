@@ -1,0 +1,52 @@
+<%- include('partials/header', { title: 'Add New Contact - Contact App' }) %>
+
+<section id="formView" class="card-view">
+    <div class="card-header form-header">
+        <h2>Add New Contact</h2>
+    </div>
+    <div class="card-body">
+        <form id="contactForm" class="contact-form" action="/add" method="POST">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <div class="input-wrapper">
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <div class="input-wrapper">
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-wrapper">
+                    <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <div class="input-wrapper">
+                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <div class="input-wrapper">
+                    <textarea id="address" name="address" rows="4" placeholder="Enter residential address" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" id="btnSave" class="btn-save">Save</button>
+                <a href="/" class="btn-link btn-cancel">Cancel</a>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

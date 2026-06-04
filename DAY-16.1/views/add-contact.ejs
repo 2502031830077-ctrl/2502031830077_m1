@@ -1,60 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Add Contact</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/custom.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        <a class="navbar-brand text-uppercase" href="/"><strong>Contact</strong> App</a>
-      </div>
-    </nav>
-    <main class="py-5">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-md-8">
-            <div class="card">
-              <div class="card-header"><strong>Add New Contact</strong></div>
-              <div class="card-body">
-                <form action="/add-contact" method="POST">
-                  <div class="form-group row">
-                    <label class="col-md-3 col-form-label" for="first_name">First Name</label>
-                    <div class="col-md-9"><input type="text" name="first_name" id="first_name" class="form-control" required></div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-md-3 col-form-label" for="last_name">Last Name</label>
-                    <div class="col-md-9"><input type="text" name="last_name" id="last_name" class="form-control" required></div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-md-3 col-form-label" for="email">Email</label>
-                    <div class="col-md-9"><input type="email" name="email" id="email" class="form-control" required></div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-md-3 col-form-label" for="phone">Phone</label>
-                    <div class="col-md-9"><input type="text" name="phone" id="phone" class="form-control" required></div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-md-3 col-form-label" for="address">Address</label>
-                    <div class="col-md-9"><textarea name="address" id="address" rows="3" class="form-control" required></textarea></div>
-                  </div>
-                  <div class="form-group row mb-0">
-                    <div class="col-md-9 offset-md-3">
-                      <button type="submit" class="btn btn-primary">Save</button>
-                      <a href="/" class="btn btn-outline-secondary">Cancel</a>
-                    </div>
-                  </div>
-                </form>
+<%- include('partials/header.ejs') %>
+
+<main class="py-5">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header"><strong>Add New Contact</strong></div>
+          <div class="card-body">
+            <style>
+              .custom-form-table {
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                border-radius: 8px;
+                overflow: hidden;
+              }
+              .custom-form-table th {
+                background-color: #f8f9fa;
+                color: #495057;
+                font-weight: 600;
+                vertical-align: middle;
+              }
+              .custom-form-table td {
+                vertical-align: middle;
+              }
+            </style>
+
+            <form action="/add-contact" method="POST">
+              <table class="table table-bordered custom-form-table mb-4">
+                <tbody>
+                  <tr>
+                    <th scope="row" style="width: 30%;"><label for="first_name" class="mb-0"><i class="fa fa-user text-primary mr-2"></i> First Name</label></th>
+                    <td><input type="text" name="first_name" id="first_name" class="form-control" required></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="last_name" class="mb-0"><i class="fa fa-user text-primary mr-2"></i> Last Name</label></th>
+                    <td><input type="text" name="last_name" id="last_name" class="form-control" required></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="email" class="mb-0"><i class="fa fa-envelope text-info mr-2"></i> Email</label></th>
+                    <td><input type="email" name="email" id="email" class="form-control" required></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="phone" class="mb-0"><i class="fa fa-phone text-success mr-2"></i> Phone</label></th>
+                    <td><input type="text" name="phone" id="phone" class="form-control" required></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><label for="address" class="mb-0"><i class="fa fa-map-marker text-danger mr-2"></i> Address</label></th>
+                    <td><textarea name="address" id="address" rows="3" class="form-control" required></textarea></td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr>
+              <div class="form-group row mb-0 text-center">
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary px-4 rounded-pill shadow-sm"><i class="fa fa-save"></i> Save</button>
+                  <a href="/" class="btn btn-secondary px-4 rounded-pill shadow-sm mx-2"><i class="fa fa-times"></i> Cancel</a>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
-    </main>
-  </body>
-</html>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer.ejs') %>

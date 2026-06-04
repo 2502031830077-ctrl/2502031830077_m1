@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A single‑page demo showcasing many jQuery onclick features with a modern glass‑morphism design.">
+    <title>jQuery Onclick Feature Demo</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-3fp5R2f9e/2p4jC+V1v8pK6i9v5yB2rD5wB5f7tBq4M=" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-h: 260; /* hue */
+            --primary-s: 80%;
+            --primary-l: 55%;
+            --bg-h: 230; --bg-s: 20%; --bg-l: 12%;
+            --dark-bg-h: 210; --dark-bg-s: 15%; --dark-bg-l: 10%;
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: hsl(var(--bg-h), var(--bg-s), var(--bg-l));
+            color: #fff;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, hsl(var(--primary-h), var(--primary-s), 70%), hsl(var(--primary-h), var(--primary-s), 40%));
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        header h1 {margin:0;font-size:2.5rem;font-weight:800;}
+        .container {max-width:900px;margin:2rem auto;padding:0 1rem;}
+        button {
+            background: rgba(255,255,255,0.1);
+            border:none;
+            color:#fff;
+            padding:0.75rem 1.2rem;
+            margin:0.3rem;
+            border-radius:8px;
+            cursor:pointer;
+            font-weight:600;
+            transition:background .3s,transform .2s;
+        }
+        button:hover {background:rgba(255,255,255,0.2);transform:translateY(-2px);}
+        .section {margin-top:2rem;padding:1.5rem;background:rgba(255,255,255,0.08);border-radius:12px;backdrop-filter:blur(8px);}
+        .hidden {display:none;}
+        /* Modal */
+        .modal {display:none;position:fixed;z-index:1000;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);align-items:center;justify-content:center;}
+        .modal img {max-width:90%;max-height:80vh;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.5);}
+        .modal-close {position:absolute;top:20px;right:30px;color:#fff;font-size:2rem;cursor:pointer;}
+        /* Tooltip */
+        .tooltip {position:relative;display:inline-block;}
+        .tooltip .tooltiptext {
+            visibility:hidden;
+            width:140px;
+            background-color:#555;
+            color:#fff;
+            text-align:center;
+            border-radius:6px;
+            padding:5px 0;
+            position:absolute;
+            z-index:1;
+            bottom:125%;
+            left:50%;
+            margin-left:-70px;
+            opacity:0;
+            transition:opacity .3s;
+        }
+        .tooltip:hover .tooltiptext {visibility:visible;opacity:1;}
+        /* Accordion */
+        .accordion {background:rgba(255,255,255,0.1);border-radius:8px;margin:0.5rem 0;}
+        .accordion-header {padding:0.8rem 1rem;cursor:pointer;}
+        .accordion-content {padding:0 1rem;max-height:0;overflow:hidden;transition:max-height .3s ease;}
+        .accordion-content.open {max-height:200px;}
+        /* Copy feedback */
+        .copy-feedback {margin-left:8px;color:#9fa8ff;opacity:0;transition:opacity .3s;}
+        .copy-feedback.visible {opacity:1;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuery Onclick Feature Demo</h1>
+    </header>
+    <div class="container">
+        <!-- Alert button -->
+        <div class="section">
+            <h2>Alert</h2>
+            <button id="btnAlert">Show Alert</button>
+        </div>
+        <!-- Toggle paragraph visibility -->
+        <div class="section">
+            <h2>Toggle Visibility</h2>
+            <button id="btnToggle">Toggle Text</button>
+            <p id="toggleText" class="hidden">This paragraph appears and disappears with each click.</p>
+        </div>
+        <!-- Dark mode switch -->
+        <div class="section">
+            <h2>Dark Mode</h2>
+            <button id="btnDarkMode">Toggle Dark Mode</button>
+        </div>
+        <!-- Copy to clipboard -->
+        <div class="section">
+            <h2>Copy to Clipboard</h2>
+            <button class="copyBtn" data-copy="Sample text to copy">Copy Text</button>
+            <span class="copy-feedback">Copied!</span>
+        </div>
+        <!-- Image modal -->
+        <div class="section">
+            <h2>Image Modal</h2>
+            <button id="btnOpenModal">Open Image</button>
+        </div>
+        <!-- Tooltip demo -->
+        <div class="section">
+            <h2>Tooltip</h2>
+            <span class="tooltip">Hover me
+                <span class="tooltiptext">I am a tooltip!</span>
+            </span>
+        </div>
+        <!-- Accordion demo -->
+        <div class="section">
+            <h2>Accordion</h2>
+            <div class="accordion">
+                <div class="accordion-header">Section 1</div>
+                <div class="accordion-content"><p>Content for section 1.</p></div>
+            </div>
+            <div class="accordion">
+                <div class="accordion-header">Section 2</div>
+                <div class="accordion-content"><p>Content for section 2.</p></div>
+            </div>
+        </div>
+        <!-- Dynamic list -->
+        <div class="section">
+            <h2>Dynamic List</h2>
+            <input type="text" id="newItem" placeholder="New item" style="padding:0.5rem;margin-right:0.3rem;">
+            <button id="addItem">Add Item</button>
+            <ul id="itemList" style="margin-top:0.5rem;list-style:disc;padding-left:1.5rem;">
+            </ul>
+        </div>
+    </div>
+    <!-- Modal structure -->
+    <div class="modal" id="imgModal">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <img src="C:/Users/Student/.gemini/antigravity-ide/brain/cf405b63-3582-427e-b499-40a37d64c24f/sample1.png" alt="Demo Image">
+    </div>
+    <script>
+        $(function(){
+            // Alert
+            $('#btnAlert').on('click', function(){ alert('Hello from jQuery!'); });
+            // Toggle visibility
+            $('#btnToggle').on('click', function(){ $('#toggleText').toggleClass('hidden'); });
+            // Dark mode
+            $('#btnDarkMode').on('click', function(){
+                if($('body').css('background-color') === 'rgb(24, 24, 37)'){
+                    $('body').css('background', 'hsl(var(--bg-h), var(--bg-s), var(--bg-l)');
+                } else {
+                    $('body').css('background', 'hsl(var(--dark-bg-h), var(--dark-bg-s), var(--dark-bg-l)');
+                }
+            });
+            // Copy to clipboard
+            $('.copyBtn').on('click', function(){
+                const text = $(this).data('copy');
+                navigator.clipboard.writeText(text).then(()=>{
+                    $('.copy-feedback').addClass('visible');
+                    setTimeout(()=>$('.copy-feedback').removeClass('visible'),1500);
+                });
+            });
+            // Image modal
+            $('#btnOpenModal').on('click', function(){ $('#imgModal').fadeIn(); });
+            $('#closeModal').on('click', function(){ $('#imgModal').fadeOut(); });
+            // Accordion
+            $('.accordion-header').on('click', function(){
+                $(this).next('.accordion-content').toggleClass('open');
+            });
+            // Dynamic list
+            $('#addItem').on('click', function(){
+                const val = $('#newItem').val().trim();
+                if(val){ $('#itemList').append('<li>'+val+'</li>'); $('#newItem').val(''); }
+            });
+        });
+    </script>
+</body>
+</html>
